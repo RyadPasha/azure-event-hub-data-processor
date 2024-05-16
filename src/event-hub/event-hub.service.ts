@@ -82,10 +82,10 @@ export class EventHubService implements OnModuleInit {
 
   /**
    * Determines the appropriate Service Bus queue name based on the event type.
-   * @param eventBody - The body of the event.
+   * @param eventType - The type of the event.
    * @returns         The name of the Service Bus queue.
    */
-  private determineQueue(eventBody: any): string {
-    return `${eventBody}-queue`;
+  private determineQueue(eventType: string): string {
+    return `${eventType}-queue`;
   }
 }
